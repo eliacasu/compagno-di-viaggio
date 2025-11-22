@@ -92,40 +92,28 @@
   nav {
   background: #ffd966;
   display: flex;
-  flex-direction: row;    /* sempre orizzontale */
-  justify-content: center;
+  flex-direction: row;
+  justify-content: flex-start; /* o center */
   align-items: center;
-  flex-wrap: wrap;        /* va su più righe solo se strettissimo */
-  padding: 12px 10px;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  overflow-x: auto; /* permette scroll orizzontale */
+  white-space: nowrap; /* evita ritorni a capo */
+  padding: 10px;
 }
 
 nav a {
   color: #1e4d6b;
   text-decoration: none;
   font-weight: bold;
-  margin: 0 10px;
-  font-size: clamp(12px, 4vw, 18px);  /* font che scala con lo schermo */
-  white-space: nowrap;   /* impedisce il ritorno a capo */
-  transition: 0.3s;
+  margin: 0 12px;
+  font-size: clamp(12px, 4vw, 18px);
+  white-space: nowrap;
 }
 
-nav a:hover {
-  color: white;
-}
+nav a:hover { color: white; }
 
-/* Rimuovere completamente il flex-direction: column sui media query */
-@media(max-width: 768px){
-  nav {
-    flex-direction: row;  /* rimane orizzontale */
-    justify-content: center;
-  }
-  nav a {
-    margin: 0 8px;
-    font-size: clamp(10px, 4vw, 16px);
-  }
+/* Nasconde eventuali scrollbar su mobile per estetica */
+nav::-webkit-scrollbar {
+  display: none;
 }
     /* Sezioni */
     section {
