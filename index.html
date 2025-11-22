@@ -105,7 +105,7 @@ nav {
   color:#1e4d6b;
 }
 
-/* Mobile */
+/* Mobile Navbar */
 @media(max-width:768px){
   .nav-links { display:none; flex-direction:column; width:100%; background:#ffd966; margin-top:10px; }
   .nav-links.show { display:flex; }
@@ -165,6 +165,7 @@ footer { background:#163b52; color:white; text-align:center; padding:25px 0; mar
 
 /* Responsive */
 @media(max-width:900px){ .about{ flex-direction:column; } .about img{ max-width:100%; } }
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 5rem;
@@ -173,9 +174,11 @@ footer { background:#163b52; color:white; text-align:center; padding:25px 0; mar
 
   /* Solo per la frase sotto il titolo */
   .hero-subtitle {
-    font-size: 0.5rem !important; /* forza la dimensione */
+    font-size: 0.9rem !important;
+    margin-bottom: 15px;
   }
 }
+</style>
 </head>
 <body>
 
@@ -256,7 +259,6 @@ footer { background:#163b52; color:white; text-align:center; padding:25px 0; mar
   <p>© 2025 Voyage Virtuoso – Elia Casu</p>
 </footer>
 
-<!-- JS Navbar Hamburger -->
 <script>
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('nav-links');
