@@ -147,12 +147,13 @@
       gap: 40px;
     }
 
-    .about img {
-      flex: 1;
-      max-width: 400px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
+.about img {
+  flex: 1;
+  max-width: 100%;  /* non superare la larghezza del contenitore */
+  height: auto;     /* mantiene le proporzioni */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
     .about .text {
       flex: 2;
