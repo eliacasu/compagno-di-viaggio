@@ -27,11 +27,29 @@ align-items: center;
 color: white;
 text-align: center;
 padding: 0 20px;
+position: relative;
 }
 .hero h1 {font-family:'Montserrat',sans-serif; font-size:3rem; margin-bottom:15px;}
 .hero p {font-size:1.3rem; margin-bottom:25px;}
-.hero .cta-btn {padding:15px 30px; background:#ffcc00; color:#1e4d6b; text-decoration:none; font-weight:bold; border-radius:8px; transition:0.3s;}
-.hero .cta-btn:hover {background:#e6b800;}
+
+
+/* Pulsanti Email e WhatsApp visibili subito */
+.hero-buttons {
+position: absolute;
+bottom: 20px;
+display: flex;
+gap: 15px;
+}
+.hero-buttons a {
+padding:12px 25px;
+background:#ffcc00;
+color:#1e4d6b;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+transition:0.3s;
+}
+.hero-buttons a:hover {background:#e6b800;}
 
 
 /* Navbar */
@@ -68,32 +86,4 @@ p, li {margin-bottom:15px; font-size:1.1rem;}
 .grid-item span {position:absolute; bottom:0; left:0; right:0; background:rgba(0,0,0,0.5); color:white; text-align:center; padding:10px 0; font-weight:bold; font-size:1.1rem;}
 
 
-/* Contatti */
-.contact-btn {display:inline-block; padding:12px 25px; background:#1e4d6b; color:white; border-radius:8px; text-decoration:none; font-weight:bold; transition:background 0.3s; margin-right:15px;}
-.contact-btn:hover {background:#3a7ca5;}
-
-
-/* Footer */
-footer {background:#163b52; color:white; text-align:center; padding:25px 0; margin-top:40px;}
-
-
-/* Responsive */
-@media(max-width:900px){.about{flex-direction:column;} .about img{max-width:100%;}}
-@media(max-width:768px){nav{flex-direction:column;} nav a{margin:8px 0;} .hero h1{font-size:2.2rem;}}
-</style>
-</head>
-<body>
-
-
-<div class="hero">
-<h1>Compagno di Viaggio</h1>
-<p>Il tuo accompagnatore personale nel Mediterraneo – con Elia Casu</p>
-<a class="cta-btn" href="#destinazioni">Scopri le Destinazioni</a>
-</div>
-
-
-<nav>
-<a href="#chi-sono">Chi Sono</a>
-<a href="#servizi">Servizi</a>
-<a href="#destinazioni">Destinazioni</a>
 </html>
