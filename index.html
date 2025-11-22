@@ -93,34 +93,33 @@
   background: #ffd966;
   display: flex;
   justify-content: center;
-  align-items: center; /* centra verticalmente i link */
-  padding: 12px 10px;
+  align-items: center;
+  padding: 8px 10px;
   position: sticky;
   top: 0;
   z-index: 100;
-  flex-wrap: nowrap;      /* evita che i link vadano a capo */
+  flex-wrap: nowrap;  /* evita che i link vadano a capo */
 }
 
 nav a {
   color: #1e4d6b;
   text-decoration: none;
   font-weight: bold;
-  margin: 0 10px;        /* margine orizzontale ridotto per mobile */
+  margin: 0 8px;       /* margine più piccolo per mobile */
   transition: 0.3s;
-  font-size: clamp(12px, 4vw, 18px); /* si riduce automaticamente su schermo piccolo */
-  white-space: nowrap;    /* impedisce il ritorno a capo dei link */
+  font-size: clamp(12px, 4vw, 16px); /* si riduce con lo schermo */
+  white-space: nowrap;  /* impedisce ritorno a capo */
 }
 
 nav a:hover {
   color: white;
 }
 
-/* Mobile: niente flex-direction column */
-@media(max-width: 768px){
-  nav {
-    flex-direction: row;   /* forza sempre orizzontale */
-    justify-content: space-around; /* distribuisce i link equamente */
-    padding: 10px 5px;
+/* Mobile (schermi fino a 768px) */
+@media (max-width: 768px) {
+  nav a {
+    font-size: clamp(10px, 4vw, 14px); /* font ancora più piccolo su telefoni stretti */
+    margin: 0 6px; /* margini più stretti per far stare i link in orizzontale */
   }
 }
     /* Sezioni */
