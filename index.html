@@ -166,14 +166,23 @@ footer { background:#163b52; color:white; text-align:center; padding:25px 0; mar
 /* Logo fisso in basso a sinistra */
 .bottom-logo {
   position: fixed;
-  bottom:20px;
-  left:20px;
-  width:30px;
-  height:auto;
-  z-index:200;
+  bottom: 15px;
+  left: 15px;
+  z-index: 200;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   transition: transform 0.3s;
 }
-.bottom-logo:hover { transform: scale(1.1); }
+
+.bottom-logo img {
+  width: 40px;
+  height: auto;
+  display: block;
+}
+
+.bottom-logo:hover {
+  transform: scale(1.1);
+}
 
 /* Responsive */
 @media(max-width:900px){ .about{ flex-direction:column; } .about img{ max-width:100%; } }
