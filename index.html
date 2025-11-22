@@ -170,16 +170,9 @@ footer { background:#163b52; color:white; text-align:center; padding:25px 0; mar
     font-size: 5rem;   /* dimensione ridotta per mobile */
     line-height: 0.9;  /* riduce lo spazio tra le parole */
   }
-}
-  @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 3rem;
-    line-height: 1.1;
-  }
-
-  /* Riduce il testo sotto il titolo solo su mobile */
-  .hero p {
-    font-size: 1rem;
+    @media (max-width: 768px) {
+  .hero-subtitle {
+    font-size: 1rem;  /* riduce solo questa frase */
   }
 }
 </style>
@@ -188,7 +181,7 @@ footer { background:#163b52; color:white; text-align:center; padding:25px 0; mar
 
 <div class="hero">
   <h1>Voyage Virtuoso</h1>
-  <p>Il tuo accompagnatore personale nel Mediterraneo</p>
+  <p class="hero-subtitle">Il tuo accompagnatore personale nel Mediterraneo</p>
   <div class="hero-buttons">
     <a href="mailto:elia.casu@email.com" class="email-btn"><i class="fas fa-envelope"></i></a>
     <a href="https://wa.me/905432879981" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
