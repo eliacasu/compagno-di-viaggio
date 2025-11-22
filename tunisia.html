@@ -8,36 +8,35 @@
 <style>
 body {
   font-family: 'Roboto', sans-serif;
-  background:#f0f0f0;
   margin:0;
   padding:0;
+  background:#f0f0f0;
 }
 
-/* Logo in alto a sinistra */
+/* Logo in alto a sinistra senza padding */
 .top-logo {
   position: fixed;
-  top:15px;
-  left:15px;
+  top:0;
+  left:0;
   z-index:200;
   cursor:pointer;
   transition: transform 0.3s;
 }
 .top-logo img {
-  width:40px;   /* dimensione logo */
+  width:40px;
   height:auto;
 }
 .top-logo:hover {
   transform: scale(1.1);
 }
 
-/* Griglia uniforme senza spazi */
+/* Griglia che riempie la pagina, foto grandi */
 .album {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* colonne flessibili */
-  gap:0; /* elimina spazi tra le foto */
-  padding-top:0px; /* spazio sopra per il logo */
-  max-width:100%;
-  margin:0 auto;
+  grid-template-columns: repeat(4, 1fr); /* 4 foto per riga */
+  grid-auto-rows: 300px; /* altezza uniforme e più grande */
+  gap:0; /* nessuno spazio tra le foto */
+  margin:0;
 }
 
 .album-item {
@@ -46,14 +45,22 @@ body {
 
 .album-item img {
   width:100%;
-  height:150px; /* altezza uniforme per tutte le foto */
-  object-fit: cover; /* ritaglia e centra l'immagine mantenendo proporzioni */
+  height:100%;
+  object-fit:cover; /* ritaglia e centra la foto */
   display:block;
   transition: transform 0.3s;
 }
 
 .album-item:hover img {
   transform: scale(1.05);
+}
+
+/* Responsive: 2 foto per riga su mobile */
+@media(max-width: 768px) {
+  .album {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px; /* riduci altezza su mobile */
+  }
 }
 </style>
 </head>
@@ -78,7 +85,6 @@ body {
   <div class="album-item"><img src="images/tunisia10.jpg" alt="Tunisia 10"></div>
   <div class="album-item"><img src="images/tunisia11.jpg" alt="Tunisia 11"></div>
   <div class="album-item"><img src="images/tunisia12.jpg" alt="Tunisia 12"></div>
-  <!-- aggiungi altre foto qui se vuoi -->
 </div>
 
 </body>
