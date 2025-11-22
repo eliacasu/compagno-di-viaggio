@@ -93,30 +93,34 @@
   background: #ffd966;
   display: flex;
   justify-content: center;
-  padding: 12px 0;
+  align-items: center; /* centra verticalmente i link */
+  padding: 12px 10px;
   position: sticky;
   top: 0;
   z-index: 100;
-  flex-wrap: wrap; /* permette ai link di andare a capo se lo spazio è troppo */
+  flex-wrap: nowrap;      /* evita che i link vadano a capo */
 }
 
 nav a {
   color: #1e4d6b;
   text-decoration: none;
   font-weight: bold;
-  margin: 0 15px;
+  margin: 0 10px;        /* margine orizzontale ridotto per mobile */
   transition: 0.3s;
-  font-size: clamp(14px, 2vw, 20px); /* si adatta in base alla larghezza dello schermo */
+  font-size: clamp(12px, 4vw, 18px); /* si riduce automaticamente su schermo piccolo */
+  white-space: nowrap;    /* impedisce il ritorno a capo dei link */
 }
 
 nav a:hover {
   color: white;
 }
 
-/* Rimuoviamo flex-direction: column su mobile */
+/* Mobile: niente flex-direction column */
 @media(max-width: 768px){
   nav {
-    flex-direction: row; /* mantiene i link in orizzontale */
+    flex-direction: row;   /* forza sempre orizzontale */
+    justify-content: space-around; /* distribuisce i link equamente */
+    padding: 10px 5px;
   }
 }
     /* Sezioni */
