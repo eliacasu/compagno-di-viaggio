@@ -31,7 +31,7 @@
     .hero h1 {font-family:'Montserrat',sans-serif; font-size:3rem; margin-bottom:15px;}
     .hero p {font-size:1.3rem; margin-bottom:25px;}
 
-    /* Pulsanti Email e WhatsApp visibili subito */
+    /* Pulsanti Email e WhatsApp circolari */
     .hero-buttons {
       position: absolute;
       bottom: 20px;
@@ -39,15 +39,20 @@
       gap: 15px;
     }
     .hero-buttons a {
-      padding:12px 25px;
-      background:#ffcc00;
-      color:#1e4d6b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      background:#25D366; /* colore WhatsApp */
+      border-radius:50%;
       text-decoration:none;
-      font-weight:bold;
-      border-radius:8px;
+      color:white;
+      font-size:1.5rem;
       transition:0.3s;
     }
-    .hero-buttons a:hover {background:#e6b800;}
+    .hero-buttons a.email-btn {background:#ffcc00; color:#1e4d6b;}
+    .hero-buttons a:hover {transform: scale(1.1);}
 
     /* Navbar */
     nav {background:#163b52; display:flex; justify-content:center; padding:12px 0; position:sticky; top:0; z-index:100;}
@@ -89,6 +94,7 @@
     @media(max-width:900px){.about{flex-direction:column;} .about img{max-width:100%;}}
     @media(max-width:768px){nav{flex-direction:column;} nav a{margin:8px 0;} .hero h1{font-size:2.2rem;}}
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -96,8 +102,8 @@
   <h1>Compagno di Viaggio</h1>
   <p>Il tuo accompagnatore personale nel Mediterraneo – con Elia Casu</p>
   <div class="hero-buttons">
-    <a href="mailto:tuainserire@email.com">Email</a>
-    <a href="https://wa.me/39xxxxxxxxxx" target="_blank">WhatsApp</a>
+    <a href="mailto:tuainserire@email.com" class="email-btn"><i class="fas fa-envelope"></i></a>
+    <a href="https://wa.me/39xxxxxxxxxx" target="_blank"><i class="fab fa-whatsapp"></i></a>
   </div>
 </div>
 
